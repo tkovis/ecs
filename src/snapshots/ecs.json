@@ -1,0 +1,193 @@
+{
+  "World should exist but be empty": {
+    "entities": {
+      "count": 0
+    },
+    "components": {},
+    "systems": [],
+    "resources": {}
+  },
+  "World should have a position component": {
+    "entities": {
+      "count": 0
+    },
+    "components": {
+      "position": {}
+    },
+    "systems": [],
+    "resources": {}
+  },
+  "World should have an entity with position component": {
+    "entities": {
+      "1": [
+        "position"
+      ],
+      "count": 1
+    },
+    "components": {
+      "position": {
+        "1": {
+          "x": 1,
+          "y": 2
+        }
+      }
+    },
+    "systems": [],
+    "resources": {}
+  },
+  "World should have another entity with a different position component": {
+    "entities": {
+      "1": [
+        "position"
+      ],
+      "2": [
+        "position"
+      ],
+      "count": 2
+    },
+    "components": {
+      "position": {
+        "1": {
+          "x": 1,
+          "y": 2
+        },
+        "2": {
+          "x": 2,
+          "y": 1
+        }
+      }
+    },
+    "systems": [],
+    "resources": {}
+  },
+  "World should have a velocity component": {
+    "entities": {
+      "1": [
+        "position"
+      ],
+      "2": [
+        "position"
+      ],
+      "count": 2
+    },
+    "components": {
+      "position": {
+        "1": {
+          "x": 1,
+          "y": 2
+        },
+        "2": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      "velocity": {}
+    },
+    "systems": [],
+    "resources": {}
+  },
+  "The first entity should have a velocity component added": {
+    "entities": {
+      "1": [
+        "position",
+        "velocity"
+      ],
+      "2": [
+        "position"
+      ],
+      "count": 2
+    },
+    "components": {
+      "position": {
+        "1": {
+          "x": 1,
+          "y": 2
+        },
+        "2": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      "velocity": {
+        "1": {
+          "x": 0.001,
+          "y": 0
+        }
+      }
+    },
+    "systems": [],
+    "resources": {}
+  },
+  "The world should have a moveSystem": {
+    "entities": {
+      "1": [
+        "position",
+        "velocity"
+      ],
+      "2": [
+        "position"
+      ],
+      "count": 2
+    },
+    "components": {
+      "position": {
+        "1": {
+          "x": 1,
+          "y": 2
+        },
+        "2": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      "velocity": {
+        "1": {
+          "x": 0.001,
+          "y": 0
+        }
+      }
+    },
+    "systems": [
+      {
+        "name": "moveSystem"
+      }
+    ],
+    "resources": {}
+  },
+  "Entities should have moved according to velocity, position and deltaTime": {
+    "entities": {
+      "1": [
+        "position",
+        "velocity"
+      ],
+      "2": [
+        "position"
+      ],
+      "count": 2
+    },
+    "components": {
+      "position": {
+        "1": {
+          "x": 1.007,
+          "y": 2
+        },
+        "2": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      "velocity": {
+        "1": {
+          "x": 0.001,
+          "y": 0
+        }
+      }
+    },
+    "systems": [
+      {
+        "name": "moveSystem"
+      }
+    ],
+    "resources": {}
+  }
+}
