@@ -9,3 +9,5 @@ At higher entity counts rendering takes all the time with my current setup. You 
 ```
 requestAnimationFrame(render);
 ```
+
+You can find benchmark.html [here](https://adoring-fermat-e8743e.netlify.app/benchmark.html)
